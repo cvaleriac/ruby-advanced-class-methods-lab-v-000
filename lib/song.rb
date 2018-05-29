@@ -37,7 +37,7 @@ self.find_by_name || self.create_by_name
 if @@all.include?(name)
   @@all.find { |song| song.name == name }
 else
-  name = Song.create
+  name = self.create
   name
     end
   end
