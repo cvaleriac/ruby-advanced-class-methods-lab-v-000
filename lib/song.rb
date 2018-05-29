@@ -37,8 +37,9 @@ self.find_by_name(name) || self.create_by_name(name)
 if self.find_by_name(name)
   puts name
 else
-  self.new_by_name(name)
+  self.create_by_name(name)
 end
+return name
 end
 
 end
