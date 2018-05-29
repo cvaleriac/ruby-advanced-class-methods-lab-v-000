@@ -34,12 +34,12 @@ end
 
 def self.find_or_create_by_name(name)
 self.find_by_name || self.create_by_name
-if @@all.include?(name)
-  @@all.find { |song| song.name == name }
- else
-   name = Song.create
-   name
- end
+def add_song(song)
+    @songs << song
+end
+def print_songs
+    songs.each { |song| puts song.name }
+end
  end
 
 end
