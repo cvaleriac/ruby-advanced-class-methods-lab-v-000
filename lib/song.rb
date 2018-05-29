@@ -32,10 +32,10 @@ def self.find_by_name(name)
   @@all.find { |song| song.name == name }
 end
 
-def self.find_or_create_by_name(name)
+def self.find_or_create_by_name
 self.find_by_name || self.create_by_name
 if @@all.include?(name)
-  @@all.find_by_name { |song| song.name == name }
+  @@all.find { |song| song.name == name }
 else
   name = self.create
   name
