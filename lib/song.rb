@@ -37,7 +37,7 @@ self.find_by_name(name) || self.create_by_name(name)
 if self.find_by_name(name)
   puts name
 else
- return self.create_by_name(name)
+ return song
 end
 end
 end
