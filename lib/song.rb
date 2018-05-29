@@ -39,3 +39,5 @@ def self.find_or_create_by_name(name)
 def self.alphabetical
   self.all.sort_by { |song| song.name }
 end
+
+end
